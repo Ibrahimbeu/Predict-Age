@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+input[type=text], select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body>
+<h3>{{ prediction_text }}</h3>
+ <div class="login">
+	<h1>Guess your age</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+   
+    	<input type="text" name="Country" placeholder="Country" required="required" />
+        <input type="text" name="Year" placeholder="Year" required="required" />
+		<input type="text" name="Status" placeholder="Status" required="required" />
+		<input type="text" name="Adult Mortality" placeholder="Adult Mortality" required="required" />
+    <input type="text" name="infant deaths" placeholder="infant deaths" required="required" />
+        <input type="text" name="Alcohol" placeholder="Alcohol" required="required" />
+		<input type="text" name="percentage expenditure" placeholder="percentage expenditure" required="required" />
+		<input type="text" name="Hepatitis B" placeholder="Hepatitis B" required="required" />
+<input type="text" name="Measles" placeholder="Measles" required="required" />
+        <input type="text" name="BMI" placeholder="BMI" required="required" />
+		<input type="text" name="under-five deaths" placeholder="under-five deaths" required="required" />
+		<input type="text" name="Polio" placeholder="Polio" required="required" />
+<input type="text" name="Total expenditure" placeholder="Total expenditure" required="required" />
+       
+        <input type="text" name="Diphtheria" placeholder="Diphtheria" required="required" />
+		<input type="text" name="HIV/AIDS" placeholder="HIV/AIDS" required="required" />
+		<input type="text" name="GDP" placeholder="GDP" required="required" />
+<input type="text" name="Population" placeholder="Population" required="required" />
+        <input type="text" name="thinness  1-19 years" placeholder="thinness  1-19 years" required="required" />
+		<input type="text" name="thinness 5-9 years" placeholder="thinness 5-9 years" required="required" />
+		<input type="text" name="Income composition of resources" placeholder="Income composition of resources" required="required" />
+<input type="text" name="Schooling" placeholder="Schooling" required="required" />
+    <pre>
+        <button type="submit" class="btn btn-primary btn-lg">Predict</button>
+</pre>
+    </form>
+
+   <br>
+   <br>
+   
+
+ </div>
+
+
+</body>
+</html>
